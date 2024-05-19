@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@font-face{
+    font-family:'Me Quran';
+    src:url('https://kangismet.github.io/fonts/me_quran.eot');
+    src:url('https://kangismet.github.io/fonts/me_quran.eot?#iefix') format('embedded-opentype'),
+    url('https://kangismet.github.io/fonts/me_quran.ttf') format('truetype');
+    font-weight:400;
+    font-weight:normal;
+    font-display: swap;
+    }
+*{
+    font-family: "Me Quran","Traditional Arabic",Tahoma,sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    /* ====== TEMPLATE WARNA ======= */
+    --primary-color: #ffffff;
+    --panel-color: #fff;
+    --text-color: #000;
+    --back-light-color: #707070;
+    --border-color: #e6e5e5;
+    --toggle-color: #d0dddd;
+    --box1-color: #55d8d8;
+    --box2-color: #ffe6ac;
+    --box3-color: #e7d1fc;
+    --title-icon-color: #CCC; 
+}
+
+body{
+    min-height: 100vh;
+    background-color: #E6F4EF;
+}
+
+body.dark{
+    --primary-color: #3A3B3C;
+    --panel-color: #242526;
+    --text-color: #FFF;
+    --back-light-color: #CCC;
+    --border-color: #4D4C4C;
+    --toggle-color: #FFF;
+    --box1-color: #3A3B3C;
+    --box2-color: #3A3B3C;
+    --box3-color: #3A3B3C;
+    --title-icon-color: #CCC;
+}
+
+.card-surat{
+    cursor: pointer;
+    transition: 0.6s;
+    background-color: #f5f5f5;
+}
+
+.card-surat h5{
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-surat h3{
+    font-family: "Me Quran","Traditional Arabic",Tahoma,sans-serif;
+}
+
+.card-surat:hover{
+    background-color: whitesmoke;
+}
+
+body::-webkit-scrollbar {
+    width: 0;  /* Untuk scrollbar horizontal */
+    height: 0; /* Untuk scrollbar vertical */
+}
+
+  /* Optional: Untuk membuat efek transparansi pada scrollbar */
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body{
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-19deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:rotateX(0)
+    }
+}
+
+.card{
+    border-radius: 1em;
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+#searchInput {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    width: 100%;
+}

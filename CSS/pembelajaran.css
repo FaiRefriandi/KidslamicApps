@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+/* CSS/pembelajaran.css */
+
+
+.container {
+    margin-top: 80px; /* Top margin for the container */
+}
+
+.card {
+    border: none; /* Remove card border */
+}
+
+.card-body {
+    background-color: #ffffff; /* Card body background color */
+    border-radius: 8px; /* Card border radius */
+}
+
+.card-text {
+    font-size: 14px; /* Font size for card text */
+}
+
+iframe {
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top of the iframe */
+}
+
+/* Optional: Add shadow to the cards */
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+}
+
+/* Optional: Style the row with some spacing */
+.row {
+    margin-bottom: 20px; /* Bottom margin for the row */
+}
+
+/* Optional: Style the iframe to be responsive */
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 0;  /* Untuk scrollbar horizontal */
+    height: 0; /* Untuk scrollbar vertical */
+}
+
+  /* Optional: Untuk membuat efek transparansi pada scrollbar */
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body{
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-19deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:rotateX(0)
+    }
+}

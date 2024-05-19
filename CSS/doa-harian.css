@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@font-face{
+    font-family:'Me Quran';
+    src:url('https://kangismet.github.io/fonts/me_quran.eot');
+    src:url('https://kangismet.github.io/fonts/me_quran.eot?#iefix') format('embedded-opentype'),
+    url('https://kangismet.github.io/fonts/me_quran.ttf') format('truetype');
+    font-weight:400;
+    font-weight:normal;
+    font-display: swap;
+    }
+*{
+    font-family: "Me Quran","Traditional Arabic",Tahoma,sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #E6F4EF;
+}
+
+.card-doa{
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+body::-webkit-scrollbar {
+    width: 0;  /* Untuk scrollbar horizontal */
+    height: 0; /* Untuk scrollbar vertical */
+}
+
+  /* Optional: Untuk membuat efek transparansi pada scrollbar */
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body{
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-19deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:rotateX(0)
+    }
+}
+
+.card{
+    border-radius: 1em;
+    transition: transform 0.5s ease;
+    background-color: #f5f5f5;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-doa h5{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    clear: both;
+    margin-bottom: 30px;
+}
+
+.card-doa p{
+    font-family: 'Poppins', sans-serif;
+    clear: both;
+}
+
+.card-doa h3{
+    font-size: 35px;
+    border-radius: 10px; /* Atur sesuai keinginan Anda */
+    border: 1px solid wheat;
+    padding: 20px; /* Atur sesuai keinginan Anda */
+    float: right;
+    background-color: #ffff;
+    line-height: 2em;
+    font-family: "Me Quran","Traditional Arabic",Tahoma,sans-serif;
+}
+
+#searchInput {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    width: 100%;
+}
