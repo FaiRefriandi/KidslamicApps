@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@font-face{
+    font-family:'Me Quran';
+    src:url('https://kangismet.github.io/fonts/me_quran.eot');
+    src:url('https://kangismet.github.io/fonts/me_quran.eot?#iefix') format('embedded-opentype'),
+    url('https://kangismet.github.io/fonts/me_quran.ttf') format('truetype');
+    font-weight:400;
+    font-weight:normal;
+    font-display: swap;
+    }
+*{
+    font-family: "Me Quran","Traditional Arabic",Tahoma,sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 0;  /* Untuk scrollbar horizontal */
+    height: 0; /* Untuk scrollbar vertical */
+}
+
+  /* Optional: Untuk membuat efek transparansi pada scrollbar */
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body{
+    animation: transitionIn 0.75s;
+       background: linear-gradient(-45deg,  #23d5ab, #23a6d5, #23d5ab, #23a6d5);
+       background-size: 400% 400%;
+       animation: gradient 15s ease infinite;
+       height: 250vh;
+    }
+
+    @keyframes gradient {
+       0% {
+          background-position: 0% 50%;
+       }
+       50% {
+          background-position: 100% 50%;
+       }
+       100% {
+          background-position: 0% 50%;
+       }
+    }
+
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:rotateX(0)
+    }
+}
+
+.card{
+    border-radius: 1em;
+    background-color: #f5f5f5;
+}
+
+/*(.card:nth-child(2n) {
+    background-color:#f5f5f5; /* Warna latar belakang untuk elemen dengan indeks genap
+}*/
+
+.judul-surat{
+    border-radius: 1em;
+}
+
+.btn{
+    transition: transform 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 8px;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.card-body h2 {
+    border-radius: 10px; /* Atur sesuai keinginan Anda */
+    border: 1px solid wheat; /* Warna dan ketebalan border */
+    padding: 20px; /* Atur sesuai keinginan Anda */
+    float: right; /* Menjaga teks di sebelah kanan */
+    margin-bottom: 10px; /* Menambahkan margin bawah agar tidak bertabrakan dengan elemen lain */
+    background-color: #ffff;
+}
+
+.card-body p {
+    clear: both; /* Menghindari elemen <p> bersentuhan dengan elemen <h1> */
+}
+
+.card-body h2{
+    font-family: "Me Quran","Traditional Arabic",Tahoma,sans-serif;
+    line-height: 2.2em;
+}
+
+.hidden-button{
+    display: none;
+}

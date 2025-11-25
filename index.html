@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Kidslamic Cuy!</title>
+    <style>
+        /* Tambahkan gaya CSS untuk mengatur lebar dan tinggi iframe */
+        #iframe-container {
+            width: 100%;
+            height: 100vh; /* 100% dari tinggi viewport */
+        }
+
+        #page-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;/* Menghilangkan border iframe */
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="image/logo2.png" alt="">
+            </div>
+            <span class="logo-name2">Kidslamic. </span>
+        </div>
+        <div class="menu-item">
+            <ul class="nav-link">
+                <!-- <li><a href="#" onclick="openPage('beranda.html'); return false;">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="link-name">Beranda</span>
+                </a></li> -->
+                <li><a href="#" onclick="openPage('Al-qur\'an.html'); return false;">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span class="link-name">Al-Qur'an</span>
+                </a></li>
+                <li><a href="#" onclick="openPage('jadwal.html'); return false;">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span class="link-name">Jadwal Shalat</span>
+                </a></li>
+                <li><a href="#" onclick="openPage('doa-harian.html'); return false;">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="link-name">Doa Harian</span>
+                </a></li>
+                <li><a href="#" onclick="openPage('tugas-harian.html'); return false;">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span class="link-name">Tugas Harian</span>
+                </a></li>
+                <li><a href="#" onclick="openPage('pembelajaran.html'); return false;">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span class="link-name">Pembelajaran</span>
+                </a></li>
+                 <!-- <li><a href="#" onclick="openPage('home.php'); return false;">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="link-name">Profil</span>
+                </a></li> -->
+            </ul>
+
+            <!-- <ul class="logout">
+                <li><a href="logout.php">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </a></li> -->
+
+                <!-- SWITCH UNTUK MENGUBAH TEMA -->
+
+                <div class="tema-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+            <h1>Kidslamic</h1>
+        </div>
+
+        <!-- Container untuk iframe -->
+        <div id="iframe-container">
+            <iframe id="page-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <script src="JS/default.js"></script>
+    <script>
+        function openPage(pageUrl) {
+            // Mengganti src iframe dengan halaman yang diinginkan
+            document.getElementById('page-iframe').src = pageUrl;
+        }
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuLinks = document.querySelectorAll('.menu-item li a');
+        var navElement = document.querySelector('nav');
+
+        // Fungsi untuk mengatur warna teks, latar belakang, dan border-radius
+        function setStyles(link) {
+            // Menghapus warna putih, latar belakang, dan border-radius dari semua menu item
+            menuLinks.forEach(function (otherLink) {
+                otherLink.style.color = '';
+                otherLink.style.backgroundColor = '';
+                otherLink.style.borderRadius = '';
+                otherLink.style.boxShadow = '';
+            });
+
+            // Ganti warna teks, latar belakang, dan border-radius hanya untuk menu item yang diinteraksi
+            link.style.color = 'white';
+            link.style.backgroundColor = '#128F67';
+            link.style.borderRadius = '10px';
+            link.style.boxShadow = '10px 10px 45px -9px rgba(155,155,155,1)';
+
+            // Simpan status styling di localStorage
+            localStorage.setItem('selectedLink', link.getAttribute('href'));
+        }
+
+        // Memuat status styling dari localStorage saat halaman dimuat
+        var selectedLink = localStorage.getItem('selectedLink');
+        if (selectedLink) {
+            var selectedLinkElement = document.querySelector('.menu-item li a[href="' + selectedLink + '"]');
+            if (selectedLinkElement) {
+                setStyles(selectedLinkElement);
+            }
+        }
+
+        // Tambahkan kelas 'close' ke elemen nav saat halaman dimuat
+        navElement.classList.add('close');
+
+        // Tambahkan event listener untuk setiap menu item saat diklik
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                setStyles(link);
+
+                // Menghentikan event agar tidak mempengaruhi elemen di luar menu item
+                event.stopPropagation();
+            });
+
+            // Tambahkan event listener untuk setiap menu item saat fokus
+            link.addEventListener('focus', function () {
+                setStyles(link);
+            });
+        });
+
+        // Tambahkan event listener pada dokumen untuk menanggapi klik di luar menu item
+        document.addEventListener('click', function (event) {
+            var isClickedInsideMenu = menuLinks.some(function (link) {
+                return link.contains(event.target);
+            });
+
+            // Jika tidak diklik di dalam menu item, kembalikan warna dan border-radius ke nilai aslinya
+            if (!isClickedInsideMenu) {
+                menuLinks.forEach(function (link) {
+                    link.style.color = '';
+                    link.style.backgroundColor = '';
+                    link.style.borderRadius = '';
+                    link.style.boxShadow = '';
+                });
+
+                // Hapus status styling dari localStorage
+                localStorage.removeItem('selectedLink');
+            }
+        });
+    });
+
+    // Memuat halaman Al-Qur'an saat halaman index dimuat
+    document.addEventListener('DOMContentLoaded', function () {
+        openPage('Al-qur\'an.html');
+    });
+</script>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&copy; 2024 Kidslamic Made with ❤️ by Fai Refriandi</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

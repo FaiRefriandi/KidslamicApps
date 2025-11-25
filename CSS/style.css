@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #008b8b;
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+nav.close {
+    width: 73px;
+}
+
+nav .logo-name {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-image {
+    display: flex;
+    min-width: 45px;
+    justify-content: center;
+}
+
+nav .logo-image img {
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav .logo-name .logo-name2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-left: 14px;
+    transition: all 0.5s ease;
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 8px;
+    margin-top: 3px;
+    animation: gradient 5s ease infinite;
+}
+
+nav.close .logo-name2 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 70%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav .menu-item {
+    margin-top: 40px;
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item li {
+    list-style: none;
+    margin-bottom: 5px; /* Tambahkan jarak antara kotak pada setiap menu item */
+}
+
+.menu-item li a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    color: #3e3e3e;
+    margin-bottom: 5px; /* Tambahkan jarak antara kotak pada setiap menu item */
+}
+
+.menu-item li a:active {
+    color: white !important;
+}
+
+.menu-item li a:focus {
+    background-color: #128F67;
+    border-radius: 15px;
+    outline: none;
+    box-shadow: 5px 5px 45px -9px rgba(155,155,155,1);
+}
+
+.menu-item li a i {
+    font-size: 15px;
+    min-width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+}
+
+.menu-item li a .link-name {
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    font-weight: 500;
+}
+
+nav.close li a .link-name {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-item .logout {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding-top: 10px;
+    border-top: 1px solid #3e3e3e;
+}
+
+.menu-item .logout a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 50px; /* Adjust the width as per your preference */
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    color: #3e3e3e;
+    background-color: #c5f9e6;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.menu-item .logout a:hover {
+    background-color: #a2d1c2; /* Ubah warna background saat hover */
+}
+
+.logout i{
+    font-size: 15px;
+    color: #028a51;
+
+}
+
+.dashboard {
+    position: relative;
+    left: 250px;
+    background-color: #fff;
+    min-height: 100vh;
+    width: calc(100% - 250px);
+    padding: 20px 5px 5px;
+    transition: all 0.5s ease;
+}
+
+nav.close ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 250px);
+    padding: 10px 14px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+.dashboard .top h1 {
+    font-size: 15px;
+    background-color: #128F67; /* Adjust the background color as per your preference */
+    padding: 5px 10px; /* Adjust padding as needed */
+    display: inline-block; /* Ensure the background color covers only the text */
+    border-radius: 8px;
+    color: #fff;
+}
+
+nav.close ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+/* Tambahkan style untuk sidebar toggle */
+.dashboard .top .sidebar-toggle {
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Rotasi ikon hamburger saat sidebar ditutup */
+nav.close ~ .dashboard .top .sidebar-toggle {
+    transform: rotate(0deg);
+}
+
+/* Rotasi ikon hamburger saat sidebar dibuka */
+nav ~ .dashboard .top .sidebar-toggle {
+    transform: rotate(90deg);
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+/* Add this to your existing CSS */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    z-index: 1000; /* Make sure the z-index is higher than the navbar */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    color: #3e3e3e;
+    font-size: 14px;
+}
+
+/*////*/
+
+/* Add hover styles to menu item */
+.menu-item li a:hover {
+    background-color: #c5f9e6;
+    border-radius: 10px;
+}

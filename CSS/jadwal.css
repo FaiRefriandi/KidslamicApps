@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.hidden-list{
+	display: none;
+}
+
+body{
+    animation: transitionIn 0.75s;
+    background-color: #E6F4EF;
+    min-height: 100vh;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-19deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:rotateX(0)
+    }
+}
+
+.card-header {
+    background-color: rgb(18, 143, 103); /* Warna background sesuai kode warna yang diinginkan */
+}
+
+.card-body{
+    font-size: 18px;
+    border-radius: 1em;
+}
+
+.card-header h4 {
+    margin-bottom: 0; /* Menghapus margin bawah default dari elemen h4 */
+    color: #fff; /* Warna teks pada elemen h4 */
+    font-weight: bold;
+}
+
+.card-footer{
+    background-color: rgb(18, 143, 103); /* Warna background sesuai kode warna yang diinginkan */
+    margin-bottom: 0; /* Menghapus margin bawah default dari elemen h4 */
+}
+
+.card-footer.text-muted.tanggal {
+    color: #fff !important; /* Warna teks putih dengan menggunakan !important */
+    font-weight: bold;
+}
+
+.list-group{
+    border-radius: 1em;
+}
+.list-group-item .badge {
+    font-size: 15px; /* Sesuaikan dengan ukuran teks yang diinginkan */
+    padding: 8px 12px; /* Sesuaikan dengan ukuran pil yang diinginkan */
+}
+
+.input-group {
+    margin-top: 5rem; /* Add margin top based on your design */
+}
+
+.input-search {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    border: 1px solid #ced4da;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 0;  /* Untuk scrollbar horizontal */
+    height: 0; /* Untuk scrollbar vertical */
+}
+
+  /* Optional: Untuk membuat efek transparansi pada scrollbar */
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body{
+    animation: transitionIn 0.75s;
+}
+
+/* Add this CSS for card styling and shadow effect */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-body {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-footer {  
+  color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Optional: Style the list group with a subtle shadow */
+
+.list-group.card-list {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::-webkit-scrollbar{
+   width: 10px;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: transparent;
+}
+
+.message{
+   margin:10px 0;
+   width: 100%;
+   border-radius: 5px;
+   padding:10px;
+   text-align: center;
+   background-color: var(--red);
+   color:var(--white);
+   font-size: 20px;
+}
+
+/* CSS UNTUK LOGIN*/
+.btn-masuk {
+   margin-top: 15px;
+   background-color: #008b8b;
+   padding: 10px 25px;
+   font-size: 12px;
+   color: white;
+   border-radius: 8px;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;  
+}
+.btn-masuk:hover{
+   background-color: #3cb5b5;
+}
+
+.btn-login{
+   margin: 10px 0 0;
+   border: 1px solid #ccc;
+   border-radius: 20%;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+}
+
+.login-container{
+   background-color: #008b0b;
+   background: linear-gradient(to right, #00ffff, #008b8b);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 100vh;
+}
+
+.login-container form{
+   padding:30px;
+   background-color: #55d8d8;
+   box-shadow: 0px 0px 59px -9px rgba(155,155,155,1);
+   background: white;
+   text-align: center;
+   width: 500px;
+   border-radius: 30px;
+}
+
+.login-container form h1{
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: black;
+   letter-spacing: 0.7px;
+}
+
+.login-container form .box{
+   width: 100%;
+   border-radius: 10px;
+   padding:12px 14px;
+   font-size: 15px;
+   color: black;
+   margin:10px 0;
+   margin-bottom: 5px;
+   background-color: #eee;
+}
+
+.login-container form p{
+   margin-top: 20px;
+   margin-bottom: 10px;
+   font-size: 12px;
+   color: black;
+}
+
+.login-container form p a{
+   color: #008b8b;
+}
+
+.login-container form p a:hover{
+   text-decoration: underline;
+}
+
+/*TUTUP CSS LOGIN*/
+
+/*CSS REGISTER*/
+
+.btn-register {
+   margin-top: 15px;
+   background-color: #008b8b;
+   padding: 10px 25px;
+   font-size: 12px;
+   color: white;
+   border-radius: 8px;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+}
+
+.btn-register:hover{
+   background-color: #3cb5b5;
+}
+
+.register-container{
+   background-color: #008b0b;
+   background: linear-gradient(to right, #00ffff, #008b8b);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 100vh;
+}
+
+.register-container form{
+   padding:30px;
+   background-color: #55d8d8;
+   box-shadow: 0px 0px 59px -9px rgba(155,155,155,1);
+   background: white;
+   text-align: center;
+   width: 500px;
+   border-radius: 30px;
+}
+
+.register-container form h1{
+   margin-bottom: 10px;
+   font-size: 30px;
+   color: black;
+   letter-spacing: 0.7px;
+}
+
+.register-container form .box{
+   width: 100%;
+   border-radius: 10px;
+   padding:12px 14px;
+   font-size: 15px;
+   color: black;
+   margin:10px 0;
+   margin-bottom: 5px;
+   background-color: #eee;
+}
+
+.register-container form p{
+   margin-top: 20px;
+   margin-bottom: 10px;
+   font-size: 12px;
+   color: black;
+}
+
+.register-container form p a{
+   color: #008b8b;
+}
+
+.register-container form p a:hover{
+   text-decoration: underline;
+}
+
+/*TUTUP CSS REGISTER*/
+
+/*CSS PROFILE PICTURE*/
+
+.btn-user {
+   margin-top: 15px;
+   background-color: #008b8b;
+   padding: 10px 25px;
+   font-size: 12px;
+   color: white;
+   border-radius: 8px;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;  
+}
+
+.btn-user:hover{
+   background-color: #3cb5b5;
+}
+
+.home-container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 100vh;
+   background: linear-gradient(-45deg,  #23d5ab, #23a6d5, #23d5ab, #23a6d5);
+   background-size: 400% 400%;
+   animation: gradient 4.5s ease infinite;
+   height: 100vh;
+}
+
+   @keyframes gradient {
+      0% {
+         background-position: 0% 50%;
+      }
+      50% {
+         background-position: 100% 50%;
+      }
+      100% {
+         background-position: 0% 50%;
+      }
+   }
+.home-container .profile{
+   padding:20px;
+   background-color: white;
+   box-shadow: 0px 0px 20px 2px rgba(155,155,155,1);
+   text-align: center;
+   width: 400px;
+   border-radius: 20px;
+}
+
+.home-container .profile img{
+   height: 120px;
+   width: 120px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 5px;
+}
+
+.home-container .profile h3{
+   margin:20px 5px;
+   font-size: 20px;
+   color: black;
+}
+
+/*TUTUP CSS PROFILE PICTURE*/
+
+.container{
+   min-height: 100vh;
+   background-color: var(--light-bg);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+}
+
+.container .profile h3{
+   margin:5px 0;
+   font-size: 20px;
+   color:var(--black);
+}
+
+.container .profile p{
+   margin-top: 20px;
+   color:var(--black);
+   font-size: 20px;
+}
+
+.container .profile p a{
+   color:var(--red);
+}
+
+.container .profile p a:hover{
+   text-decoration: underline;
+}
+
+
+
+
+/*CSSSSSSSSSS UPDATEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+
+.update-profile{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   background: linear-gradient(-45deg,  #23d5ab, #23a6d5, #23d5ab, #23a6d5);
+   background-size: 400% 400%;
+   animation: gradient 4.5s ease infinite;
+   height: 100vh;
+}
+
+   @keyframes gradient {
+      0% {
+         background-position: 0% 50%;
+      }
+      50% {
+         background-position: 100% 50%;
+      }
+      100% {
+         background-position: 0% 50%;
+      }
+   }
+
+
+.update-profile form{
+   padding:20px;
+   background-color: white;
+   box-shadow: 0px 0px 25px -9px rgba(155,155,155,1);
+   text-align: center;
+   width: 700px;
+   text-align: center;
+   border-radius: 30px;
+}
+
+.update-profile form img{
+   height: 120px;
+   width: 120px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 5px;
+}
+
+.update-profile form .flex{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   gap:15px;
+}
+
+.update-profile form .flex .inputBox{
+   width: 49%;
+}
+
+.update-profile form .flex .inputBox span{
+   text-align: left;
+   display: block;
+   margin-top: 15px;
+   font-size: 17px;
+   color:var(--black);
+}
+
+.update-profile form .flex .inputBox .box{
+   width: 100%;
+   border-radius: 10px;
+   background-color: #eee;
+   padding:12px 15px;
+   font-size: 15px;
+   color: black;
+   margin-top: 10px;
+}
+
+@media (max-width:650px){
+   .update-profile form .flex{
+      flex-wrap: wrap;
+      gap:0;
+   }
+   .update-profile form .flex .inputBox{
+      width: 100%;
+   }
+}
+
+.delete-btn{
+   margin-top: 15px;
+   background-color: rgb(245, 36, 36);
+   padding: 10px 15px;
+   font-size: 12px;
+   color: white;
+   border-radius: 8px;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+}
+
+.update-btn {
+   margin-top: 15px;
+   background-color: #008b8b;
+   padding: 10px 25px;
+   font-size: 12px;
+   color: white;
+   border-radius: 8px;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+}
+
+.delete-btn:hover{
+   background-color: #3cb5b5;
+}
+
+.update-btn:hover{
+   background-color: #3cb5b5;
+}
