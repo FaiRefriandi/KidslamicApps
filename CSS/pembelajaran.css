@@ -1,70 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 /* CSS/pembelajaran.css */
 
-
 .container {
-    margin-top: 80px; /* Top margin for the container */
+  margin-top: 80px; /* Top margin for the container */
 }
 
 .card {
-    border: none; /* Remove card border */
+  border: none; /* Remove card border */
 }
 
 .card-body {
-    background-color: #ffffff; /* Card body background color */
-    border-radius: 8px; /* Card border radius */
+  background-color: #ffffff; /* Card body background color */
+  border-radius: 8px; /* Card border radius */
 }
 
 .card-text {
-    font-size: 14px; /* Font size for card text */
+  font-size: 14px; /* Font size for card text */
 }
 
 iframe {
-    border-radius: 8px 8px 0 0; /* Rounded corners for the top of the iframe */
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the iframe */
 }
 
 /* Optional: Add shadow to the cards */
 .shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
 }
 
 /* Optional: Style the row with some spacing */
 .row {
-    margin-bottom: 20px; /* Bottom margin for the row */
+  margin-bottom: 20px; /* Bottom margin for the row */
 }
 
 /* Optional: Style the iframe to be responsive */
 iframe {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body::-webkit-scrollbar {
-    width: 0;  /* Untuk scrollbar horizontal */
-    height: 0; /* Untuk scrollbar vertical */
+  width: 0; /* Untuk scrollbar horizontal */
+  height: 0; /* Untuk scrollbar vertical */
 }
 
-  /* Optional: Untuk membuat efek transparansi pada scrollbar */
+/* Optional: Untuk membuat efek transparansi pada scrollbar */
 body::-webkit-scrollbar-thumb {
-    background-color: transparent;
+  background-color: transparent;
 }
 
-body{
-    animation: transitionIn 0.75s;
+body {
+  animation: transitionIn 0.75s;
 }
 
 @keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: rotateX(-19deg);
-    }
+  from {
+    opacity: 0;
+    transform: rotateX(-19deg);
+  }
 
-    to {
-        opacity: 1;
-        transform:rotateX(0)
-    }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN FOR PEMBELAJARAN
+   =================================== */
+
+/* Tablet and below (≤ 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+
+  iframe {
+    height: 180px;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+}
+
+/* Mobile devices (≤ 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 15px;
+    padding: 0 12px;
+    margin-bottom: 20px;
+  }
+
+  /* Ensure cards stack properly */
+  .row {
+    margin-bottom: 10px;
+  }
+
+  .col-sm {
+    margin-bottom: 15px;
+  }
+
+  /* Adjust iframe height for mobile */
+  iframe {
+    height: 200px;
+    width: 100%;
+  }
+
+  /* Card adjustments */
+  .card {
+    margin-bottom: 12px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-text {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* Add more spacing between rows */
+  .row.gy-3 {
+    row-gap: 1.2rem;
+  }
+}
+
+/* Small mobile devices (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 12px;
+    padding: 0 10px;
+  }
+
+  /* Smaller iframe for very small screens */
+  iframe {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  .card-text {
+    font-size: 11px;
+  }
+
+  /* Ensure adequate spacing */
+  .col-sm {
+    margin-bottom: 12px;
+  }
+}
+
+/* Extra small devices (≤ 360px) */
+@media screen and (max-width: 360px) {
+  .container {
+    margin-top: 10px;
+    padding: 0 8px;
+  }
+
+  iframe {
+    height: 160px;
+  }
+
+  .card-text {
+    font-size: 10px;
+  }
 }
