@@ -57,6 +57,8 @@ or use Live Server (VS Code extension).
 
 No backend needed — everything runs locally ✨
 
+---
+
 📄 License
 This project is licensed under the MIT License.
 You are free to use, modify, and distribute this project.
