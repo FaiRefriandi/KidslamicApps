@@ -45,7 +45,7 @@ KidslamicApps is a web-based Islamic learning application designed especially fo
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/FaiRefriandi/KidslamicApps.git
-
+```
 ### 2. Open the project
 
 Use any code editor (VS Code recommended).
