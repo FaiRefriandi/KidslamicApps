@@ -40,31 +40,18 @@ KidslamicApps is a web-based Islamic learning application designed especially fo
 | Assets   | PNG/JPG Images |
 | Hosting  | Vercel |
 
-## 📁 Project Structure
-
-KidslamicApps/
-│── CSS/ → Styling
-│── JS/ → JavaScript logic
-│── image/ → Illustration + icons
-│── uploaded_img/ → Uploaded content (if any)
-│── index.html → Homepage
-│── Al-quran.html → Quran page
-│── doa-harian.html → Daily prayers
-│── jadwal.html → Schedule page
-│── pembelajaran.html → Learning materials
-│── surat.html → Surah list
-│── tugas-harian.html → Daily tasks page
-│── ...other HTML files
-
 ## 🚀 Getting Started
 
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/FaiRefriandi/KidslamicApps.git
-2. Open the project
+
+### 2. Open the project
+
 Use any code editor (VS Code recommended).
 
-3. Run the app
+### 3. Run the app
+
 Just open index.html in a browser
 or use Live Server (VS Code extension).
 
